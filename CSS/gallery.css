@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500&display=swap');
+section {
+    font-family: Montserrat;
+}
+/*Gallery Container*/
+#index-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 10px;
+    grid-template-areas:
+    "gallery-p gallery-p gallery-p gallery-p"
+    "gallery-h2 gallery-h2 gallery-h2 gallery-h2"
+    "img1 img2 img3 img4"
+    "img5 img6 img3 img7"
+    "img5 img8 img9 img10"
+    "img11 img12 img13 img14"
+    "img15 img12 img16 img14"
+    "img17 img12 img18 img19";
+}
+#index-gallery .gallery-img {
+    width: 100%;
+    height: 300px;
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+/*Images*/
+#index-gallery p {
+    grid-area: gallery-p;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: gray;
+    /* border-bottom: 0.5px solid gray;*/
+}
+#index-gallery p:hover{
+    color: rgb(139, 77, 0);
+    cursor: pointer;
+}
+#index-gallery h2 {
+    grid-area: gallery-h2;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+#index-gallery .img1 {
+    grid-area: img1;
+    background-image: url("../img/thumbs/img1.jpeg");
+}
+#index-gallery .img2 {
+    grid-area: img2;
+    background-image: url("../img/thumbs/img2.jpeg");
+}
+#index-gallery .img3 {
+    grid-area: img3;
+    background-image: url("../img/thumbs/img3.jpeg");
+    height: 610px;
+}
+#index-gallery .img4 {
+    grid-area: img4;
+    background-image: url("../img/thumbs/img4.jpeg");
+}
+#index-gallery .img5 {
+    grid-area: img5;
+    background-image: url("../img/thumbs/img5.jpeg");
+    height: 610px;
+}
+#index-gallery .img6 {
+    grid-area: img6;
+    background-image: url("../img/thumbs/img6.jpeg");
+}
+#index-gallery .img7 {
+    grid-area: img7;
+    background-image: url("../img/thumbs/img7.jpeg");
+}
+#index-gallery .img8 {
+    grid-area: img8;
+    background-image: url("../img/thumbs/img8.jpeg");
+}
+#index-gallery .img9 {
+    grid-area: img9;
+    background-image: url("../img/thumbs/img9.jpeg");
+}
+#index-gallery .img10 {
+    grid-area: img10;
+    background-image: url("../img/thumbs/img10.jpeg");
+}
+#index-gallery .img11 {
+    grid-area: img11;
+    background-image: url("../img/thumbs/img11.jpeg");
+}
+#index-gallery .img12 {
+    grid-area: img12;
+    background-image: url("../img/thumbs/img12.jpeg");
+    height: 920px;
+}
+#index-gallery .img13 {
+    grid-area: img13;
+    background-image: url("../img/thumbs/img13.jpeg");
+}
+#index-gallery .img14 {
+    grid-area: img14;
+    background-image: url("../img/thumbs/img14.jpeg");
+    height: 610px;
+}
+#index-gallery .img15 {
+    grid-area: img15;
+    background-image: url("../img/thumbs/img15.jpeg");
+}
+#index-gallery .img16 {
+    grid-area: img16;
+    background-image: url("../img/thumbs/img16.jpeg");
+}
+#index-gallery .img17 {
+    grid-area: img17;
+    background-image: url("../img/thumbs/img17.jpeg");
+}
+#index-gallery .img18 {
+    grid-area: img18;
+    background-image: url("../img/thumbs/img18.jpeg");
+}
+#index-gallery .img19 {
+    grid-area: img19;
+    background-image: url("../img/thumbs/img19.jpeg");
+}
+/*Gallery image titles*/
+.gallery-img div {
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+.gallery-img div a {
+    font-family: Montserrat;
+    font-size: 18px;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.gallery-img div:hover {
+    opacity: 0.8;
+    transition: all ease-in-out 100ems;
+}
+/*Pop up window when clicked*/
+.img-window {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+.img-window img {
+    max-height: 80vh;
+    max-width: 80vw;
+}
+/*Next image*/
+.img-btn-next {
+    display: block;
+    padding: 6px 10px;
+    border-radius: 4px;
+    background-color: #111111;
+    position: fixed;
+    top: 48vh;
+    z-index: 500;
+    font-family: Montserrat;
+    color: #ffffff;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.img-btn-next:hover {
+    opacity: 0.8;
+}
+
+.img-btn-prev {
+    display: block;
+    padding: 6px 10px;
+    border-radius: 4px;
+    background-color: #111111;
+    position: fixed;
+    top: 48vh;
+    z-index: 500;
+    font-family: Montserrat;
+    color: #ffffff;
+    cursor: pointer;
+    text-transform: uppercase;
+
+}
+
+.img-btn-prev:hover {
+    opacity: 0.8;
+}
